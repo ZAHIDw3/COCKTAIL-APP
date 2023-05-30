@@ -3,7 +3,7 @@ import React from 'react'
 const CocktailList = ({cocktail = [], setCocktail}) => {
 
     const deleteCocktail = (cocktails) => {
-        const newList =cocktail.filter((cock) => cock!== cocktails)
+        const newList =cocktail.filter((coc) => coc!== cocktails)
         setCocktail([...newList])
     }
 
