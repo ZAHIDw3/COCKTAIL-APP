@@ -1,9 +1,17 @@
 import CocktailInput from './CocktailInput'
+import CocktailList from './CocktailList'
 
-const Cocktails = () => {
+const Cocktails = ({cocktail = [], setCocktail}) => {
   return (
     <div>
-        <CocktailInput/>
+        <CocktailInput
+        cocktail={cocktail}
+        setCocktail={setCocktail}
+        />
+        <CocktailList
+        cocktail={cocktail}
+        setCocktail={setCocktail}
+        />
     </div>
   )
 }

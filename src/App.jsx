@@ -2,10 +2,10 @@ import { useState } from "react"
 import Cocktails from "./Components"
 
 function App() {
-  const [cocktail, setCocktail] = useState(["Margarita"])
+  const [cocktail, setCocktail] = useState(["Margarita", "Mojito"])
   return (
     <div className="m-5">
-      <h3>COKTAIL APP</h3>
+      <h3>COCKTAIL APP</h3>
       <hr />
       <Cocktails
       cocktail={cocktail}
