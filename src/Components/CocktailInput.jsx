@@ -8,10 +8,9 @@ const CocktailInput = ({ cocktail = [], setCocktail }) => {
     }
 
     const handleAddCocktailButton = () => {
-        if (inputValue.trim() !== "") {
-            setCocktail([inputValue, ...cocktail])
-            setInputValue("")
-        }
+        if (inputValue.trim() === "") return
+        setCocktail([inputValue, ...cocktail])
+        setInputValue("")
     }
 
     const handleClearList = () => {
@@ -20,12 +19,12 @@ const CocktailInput = ({ cocktail = [], setCocktail }) => {
 
     const handleKeyPress = (e) => {
         if (e.key === "Enter") {
-          handleAddCocktailButton();
+            handleAddCocktailButton();
         }
-      };
+    };
 
     return (
-        <div>
+        <div className="text-center">
             <input
                 onChange={(e) => handleInputChange(e)}
                 onKeyPress={handleKeyPress}

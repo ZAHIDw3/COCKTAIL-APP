@@ -53,8 +53,8 @@ const CocktailExpo = ({ cocktail = [], setCocktail }) => {
     return (
         <div className="container-fluid">
             <div className="row">
-                {dataList.map((data) => (
-                    <div className="col-md-4 mb-4" key={data.url}>
+                {dataList.map((data, index) => (
+                    <div className="col-md-4 mb-4" key={`${data.name}-${index}`}>
                         <div className="card h-100">
                             <img
                                 src={data.url}
@@ -69,9 +69,16 @@ const CocktailExpo = ({ cocktail = [], setCocktail }) => {
                                 <h6 className="card-subtitle mb-2">
                                     <strong>Ingredients:</strong>
                                 </h6>
-                                <ul className="card-text" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
-                                    {data.ingredients.map((ingredient, index) => (
-                                        <li key={index}>{ingredient}</li>
+                                <ul
+                                    className="card-text"
+                                    style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}
+                                >
+                                    {data.ingredients.map((ingredient, ingredientIndex) => (
+                                        <li
+                                            key={`${data.name}-${ingredientIndex}`}
+                                        >
+                                            {ingredient}
+                                        </li>
                                     ))}
                                 </ul>
                                 <h6 className="card-subtitle mb-2">

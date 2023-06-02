@@ -5,14 +5,18 @@ import CocktailExpo from "./CocktailExpo"
 function App() {
   const [cocktail, setCocktail] = useState(["Zombie"])
   return (
-    <div className="m-5">
-      <h3>COCKTAIL APP</h3>
-      <hr />
+    <div className="m-5"
+    >
+      <h3 className="text-center" 
+      >
+        COCKTAIL APP
+      </h3>
+      <br />
       <Cocktails
         cocktail={cocktail}
         setCocktail={setCocktail}
       />
-      <hr />
+      <br />
       <CocktailExpo
         cocktail={cocktail}
         setCocktail={setCocktail}
@@ -29,7 +33,7 @@ function App() {
       {
         cocktail.length >= 2 && (
           <div >
-            <hr />
+            <br />
             <Cocktails
               cocktail={cocktail}
               setCocktail={setCocktail}
